@@ -6,3 +6,6 @@ camera_tf_broadcaster:
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
+perception_manager_node:
+  ros__parameters:
+    confidence_threshold: 0.5
