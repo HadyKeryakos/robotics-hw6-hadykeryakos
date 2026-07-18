@@ -20,8 +20,16 @@ ament_target_dependencies(camera_tf_broadcaster
   geometry_msgs
 )
 
+add_executable(perception_manager_node src/perception_manager_node.cpp)
+ament_target_dependencies(perception_manager_node
+  rclcpp
+  rclcpp_action
+  perception_interfaces
+)
+
 install(TARGETS
   camera_tf_broadcaster
+  perception_manager_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
